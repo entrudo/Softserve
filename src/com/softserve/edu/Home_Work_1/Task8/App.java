@@ -11,7 +11,6 @@ public class App {
                         "Example: java -jar SoftServe.jar 0 50");
                 return;
             }
-            gi
             String[] readArgs = args;
 
             int firstNumber = Integer.parseInt(readArgs[0]);
