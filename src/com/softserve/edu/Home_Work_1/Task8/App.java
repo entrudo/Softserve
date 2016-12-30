@@ -1,7 +1,6 @@
 package com.softserve.edu.Home_Work_1.Task8;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class App {
     public static void main(String[] args) throws IOException {
@@ -11,7 +10,6 @@ public class App {
                         "Example: java -jar SoftServe.jar 0 50");
                 return;
             }
-            gi
             String[] readArgs = args;
 
             int firstNumber = Integer.parseInt(readArgs[0]);
@@ -22,16 +20,22 @@ public class App {
             int[] array = new int[lengthOfArray + 1];
             for (int i = 0; i < array.length; i++){
                 array[i] = firstNumber + i;
-                System.out.print(array[i] + " ");
             }
 
-            int temp = 0;
-            for (int i = 0; i < array.length; i++){
-                if (i > 1){
-                    temp = array[i-2] + array[i-1];
-                    System.out.print(temp + " ");
+        int a = array[0];
+        int b = array[1];
+        int fib = 0;
+            for (int j = 0; j < array.length; j++){
+                if (j > 1){
+                    fib = a + b;
+                    a = b;
+                    b = fib;
+                    if (fib >= secondNumber){
+                        return;
+                    }
+                    System.out.print(fib + " ");
                 }else {
-                    System.out.print(array[i] + " ");
+                    System.out.print(array[j] + " ");
                 }
             }
     }
