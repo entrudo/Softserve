@@ -1,4 +1,4 @@
-package com.softserve.edu.Home_Work_1.Task5;
+package com.softserve.edu.Home_Work_1.Task5.Numbers;
 
 public class One {
     private static String one = "один";
@@ -7,10 +7,10 @@ public class One {
     private static String four = "четыре";
     private static String five = "пять";
     private static String six = "шесть";
-    private static String seven = "сем";
+    private static String seven = "семь";
     private static String eight = "восемь";
     private static String nine = "девять";
-    private static String zero = "ноль";
+    private static String zero = "";
 
     public static String onePrint(String content){
         String number = "";
@@ -48,8 +48,6 @@ public class One {
                 break;
             default:
         }
-
-
         return number;
     }
 }
