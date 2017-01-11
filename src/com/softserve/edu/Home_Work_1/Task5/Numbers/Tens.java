@@ -4,7 +4,7 @@ public class Tens {
     private static String ten = "десять";
     private static String eleven = "одинадцать";
     private static String twelve = "двенадцать";
-    private static String thirteen = "тренадцать";
+    private static String thirteen = "тринадцать";
     private static String fourteen = "четырнадцать";
     private static String fifteen = "пятнадцать";
     private static String sixteen  = "шестнадцать";

@@ -9,7 +9,7 @@ public class Hundreds {
     private static String six = "шестьсот";
     private static String seven = "семьсот";
     private static String eight = "восемьсот";
-    private static String nine = "девятсот";
+    private static String nine = "девятьсот";
     private static String zero = "";
 
     public static String hundredsPrint(String content){

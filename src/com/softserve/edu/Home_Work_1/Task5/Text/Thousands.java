@@ -19,7 +19,7 @@ public class Thousands {
                 number = three;
                 break;
             case 4:
-                number = two;
+                number = three;
                 break;
             case 5:
                 number = two;

@@ -204,7 +204,7 @@ public class App {
                     }
                 }
 
-                if (Character.toString(millons.charAt(2)).equals("s")) {
+                if (Character.toString(thousands.charAt(2)).equals("s")) {
                 } else {
                     stringBuffer.append(Thousands.printText(Character.toString(thousands.charAt(2))));
                     stringBuffer.append(" ");
