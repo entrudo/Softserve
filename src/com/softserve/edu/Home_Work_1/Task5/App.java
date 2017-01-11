@@ -3,7 +3,10 @@ package com.softserve.edu.Home_Work_1.Task5;
 import com.softserve.edu.Home_Work_1.Task5.Numbers.Decade;
 import com.softserve.edu.Home_Work_1.Task5.Numbers.Hundreds;
 import com.softserve.edu.Home_Work_1.Task5.Numbers.One;
+import com.softserve.edu.Home_Work_1.Task5.Numbers.Tens;
 import com.softserve.edu.Home_Work_1.Task5.Text.Billion;
+import com.softserve.edu.Home_Work_1.Task5.Text.Million;
+import com.softserve.edu.Home_Work_1.Task5.Text.Thousands;
 
 public class App {
     private static char[] arraySymbol;
@@ -16,6 +19,8 @@ public class App {
 
 
     public static void main(String[] args) {
+
+
         if (args.length == 0 || args.length > 1 ){
             System.out.println("You should use the next construction: <program> <number to change>");
         }
@@ -40,6 +45,9 @@ public class App {
         decade = number.substring(9, 12);
 
         addPrintMillardValue(millards);
+        addPrintMillionsValue(millons);
+        addPrintThousandsValue(thousands);
+        addPrintDecadeValue(decade);
 
         number = stringBuffer.toString().substring(0, 1).toUpperCase() + stringBuffer.toString().substring(1, stringBuffer.length());
         System.out.println(number);
@@ -75,7 +83,11 @@ public class App {
             if (i == 1) {
                 if (Character.toString(millards.charAt(1)).equals("s")) {
                 }else {
-                    stringBuffer.append(Decade.decadePrint(Character.toString(millards.charAt(1))));
+                    if (Character.toString(millards.charAt(1)).equals("1")){
+                        stringBuffer.append(Tens.tensPrint(Character.toString(millards.charAt(2))));
+                    }else {
+                        stringBuffer.append(Decade.decadePrint(Character.toString(millards.charAt(1))));
+                    }
                     if (!Character.toString(millards.charAt(1)).equals("0")) {
                         stringBuffer.append(" ");
                     }
@@ -83,30 +95,169 @@ public class App {
             }
 
             if (i == 2) {
-                if (Character.toString(millards.charAt(2)).equals("s")) {
+                if (Character.toString(millards.charAt(1)).equals("1")){
+
                 }else {
-                    stringBuffer.append(One.onePrint(Character.toString(millards.charAt(2))));
-                    if (!Character.toString(millards.charAt(2)).equals("0")) {
-                        stringBuffer.append(" ");
+                    if (Character.toString(millards.charAt(2)).equals("s")) {
+                    } else {
+                        stringBuffer.append(One.onePrint(Character.toString(millards.charAt(2))));
+                        if (!Character.toString(millards.charAt(2)).equals("0")) {
+                            stringBuffer.append(" ");
+                        }
                     }
                 }
 
-                stringBuffer.append(Billion.printText(Character.toString(millards.charAt(2))));
-                stringBuffer.append(" ");
+                if (Character.toString(millards.charAt(2)).equals("s")) {
+                }else {
+                    stringBuffer.append(Billion.printText(Character.toString(millards.charAt(2))));
+                    stringBuffer.append(" ");
+                }
             }
         }
     }
 
     public static void addPrintMillionsValue(String millons){
+        for (int i = 0; i < 3; i++) {
+            if (i == 0) {
+                if (Character.toString(millons.charAt(0)).equals("s")) {
+                } else {
+                    stringBuffer.append(Hundreds.hundredsPrint(Character.toString(millons.charAt(0))));
+                    if (!Character.toString(millons.charAt(0)).equals("0")) {
+                        stringBuffer.append(" ");
+                    }
+                }
+            }
 
+            if (i == 1) {
+                if (Character.toString(millons.charAt(1)).equals("s")) {
+                }else {
+                    if (Character.toString(millons.charAt(1)).equals("1")){
+                        stringBuffer.append(Tens.tensPrint(Character.toString(millons.charAt(2))));
+                    }else {
+                        stringBuffer.append(Decade.decadePrint(Character.toString(millons.charAt(1))));
+                    }
+                    if (!Character.toString(millons.charAt(1)).equals("0")) {
+                        stringBuffer.append(" ");
+                    }
+                }
+            }
+
+            if (i == 2) {
+                if (Character.toString(millons.charAt(1)).equals("1")){
+
+                }else {
+                    if (Character.toString(millons.charAt(2)).equals("s")) {
+                    } else {
+                        stringBuffer.append(One.onePrint(Character.toString(millons.charAt(2))));
+                        if (!Character.toString(millons.charAt(2)).equals("0")) {
+                            stringBuffer.append(" ");
+                        }
+                    }
+                }
+
+                if (Character.toString(millons.charAt(2)).equals("s")) {
+                } else {
+                    stringBuffer.append(Million.printText(Character.toString(millons.charAt(2))));
+                    stringBuffer.append(" ");
+                }
+            }
+
+        }
     }
 
     public static void addPrintThousandsValue(String thousands){
+        for (int i = 0; i < 3; i++) {
+            if (i == 0) {
+                if (Character.toString(thousands.charAt(0)).equals("s")) {
+                } else {
+                    stringBuffer.append(Hundreds.hundredsPrint(Character.toString(thousands.charAt(0))));
+                    if (!Character.toString(thousands.charAt(0)).equals("0")) {
+                        stringBuffer.append(" ");
+                    }
+                }
+            }
 
+            if (i == 1) {
+                if (Character.toString(thousands.charAt(1)).equals("s")) {
+                }else {
+                    if (Character.toString(thousands.charAt(1)).equals("1")){
+                        stringBuffer.append(Tens.tensPrint(Character.toString(thousands.charAt(2))));
+                    }else {
+                        stringBuffer.append(Decade.decadePrint(Character.toString(thousands.charAt(1))));
+                    }
+                    if (!Character.toString(thousands.charAt(1)).equals("0")) {
+                        stringBuffer.append(" ");
+                    }
+                }
+            }
+
+            if (i == 2) {
+                if (Character.toString(thousands.charAt(1)).equals("1")){
+
+                }else {
+                    if (Character.toString(thousands.charAt(2)).equals("s")) {
+                    } else {
+                        stringBuffer.append(One.onePrint(Character.toString(thousands.charAt(2))));
+                        if (!Character.toString(thousands.charAt(2)).equals("0")) {
+                            stringBuffer.append(" ");
+                        }
+                    }
+                }
+
+                if (Character.toString(millons.charAt(2)).equals("s")) {
+                } else {
+                    stringBuffer.append(Thousands.printText(Character.toString(thousands.charAt(2))));
+                    stringBuffer.append(" ");
+                }
+            }
+
+        }
     }
 
     public static void addPrintDecadeValue(String decade){
+        for (int i = 0; i < 3; i++) {
+            if (i == 0) {
+                if (Character.toString(decade.charAt(0)).equals("s")) {
+                } else {
+                    stringBuffer.append(Hundreds.hundredsPrint(Character.toString(decade.charAt(0))));
+                    if (!Character.toString(decade.charAt(0)).equals("0")) {
+                        stringBuffer.append(" ");
+                    }
+                }
+            }
 
+            if (i == 1) {
+                if (Character.toString(decade.charAt(1)).equals("s")) {
+                }else {
+                    if (Character.toString(decade.charAt(1)).equals("1")){
+                        stringBuffer.append(Tens.tensPrint(Character.toString(decade.charAt(2))));
+                    }else {
+                        stringBuffer.append(Decade.decadePrint(Character.toString(decade.charAt(1))));
+                    }
+                    if (!Character.toString(decade.charAt(1)).equals("0")) {
+                        stringBuffer.append(" ");
+                    }
+                }
+            }
+
+            if (i == 2) {
+                if (Character.toString(decade.charAt(1)).equals("1")){
+
+                }else {
+                    if (Character.toString(decade.charAt(2)).equals("s")) {
+                    } else {
+                        stringBuffer.append(One.onePrint(Character.toString(decade.charAt(2))));
+                        if (!Character.toString(decade.charAt(2)).equals("0")) {
+                            stringBuffer.append(" ");
+                        }
+                    }
+                }
+
+//                stringBuffer.append(Thousands.printText(Character.toString(thousands.charAt(2))));
+//                stringBuffer.append(" ");
+            }
+
+        }
     }
 
     public static Boolean isDigit(String number){

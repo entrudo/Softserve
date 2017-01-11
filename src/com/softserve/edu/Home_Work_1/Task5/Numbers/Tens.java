@@ -16,34 +16,34 @@ public class Tens {
         String number = "";
 
         switch (Integer.parseInt(content)){
-            case 10:
+            case 0:
                 number = ten;
                 break;
-            case 11:
+            case 1:
                 number = eleven;
                 break;
-            case 12:
+            case 2:
                 number = twelve;
                 break;
-            case 13:
+            case 3:
                 number = thirteen;
                 break;
-            case 14:
+            case 4:
                 number = fourteen;
                 break;
-            case 15:
+            case 5:
                 number = fifteen;
                 break;
-            case 16:
+            case 6:
                 number = sixteen;
                 break;
-            case 17:
+            case 7:
                 number = seventeen;
                 break;
-            case 18:
+            case 8:
                 number = eighteen;
                 break;
-            case 19:
+            case 9:
                 number = nineteen;
                 break;
             default:
