@@ -12,6 +12,7 @@ public class App {
     private static int numbersOfSecondHalf = 0;
     private static BufferedReader reader;
     private static String addressOfFile = "";
+    private static int count = 0;
 
     public static void main(String[] args) throws IOException {
         reader = new BufferedReader(new InputStreamReader(System.in));
@@ -20,6 +21,31 @@ public class App {
         addressOfFile = readFile(reader.readLine());
         //E:\Project\SoftServe\src\com\softserve\edu\Home_Work_1\Task6\Moskow.txt
 
+        for (int i = 111111; i <= 999999; i++){
+            if (addressOfFile.contains(moskow)){
+                moskowMethod(Integer.toString(i));
+                count++;
+            }else {
+                if (addressOfFile.contains(piter)){
+                    piterMethod(Integer.toString(i));
+                    count++;
+                }
+            }
+        }
+
+        System.out.println("There is " + count + " happy tickets");
+
+        System.out.println("Do you want to check you own number? Y/N");
+        String answer = reader.readLine();
+        if (answer.toLowerCase().equals("y")){
+            checkYourNumber();
+        }else {
+            return;
+        }
+
+    }
+
+    public static void checkYourNumber()throws IOException {
         while (true){
             System.out.println("Please enter the number of ticket:");
             String temp = "";
@@ -51,7 +77,6 @@ public class App {
                 return;
             }
         }
-
     }
 
     public static String readFile(String nameFile) throws IOException{

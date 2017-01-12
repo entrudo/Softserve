@@ -32,7 +32,7 @@ public class App {
                 b = Integer.parseInt(arrayStrings[2].trim());
                 c = Integer.parseInt(arrayStrings[3].trim());
             }catch (Exception e){
-                System.out.println("Help");
+                System.out.println("You should enter data in next format: <name of Triangle> <side 1> <side 2> <side 3>");
                 return;
             }
 
@@ -64,38 +64,5 @@ public class App {
                 return;
             }
         }
-
-//        System.out.println("Введите первый треугольник");
-//        String triangle = reader.readLine();
-//
-//        String[] arrayStrings = triangle.split(",");
-//        double a = Integer.parseInt(arrayStrings[1].trim());
-//        double b = Integer.parseInt(arrayStrings[2].trim());
-//        double c = Integer.parseInt(arrayStrings[3].trim());
-//
-//        double p = (double) 1/2 * (a + b + b);
-//        double s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
-//
-//
-//        //второй треугольник
-//        System.out.println("Введите второй треугольник");
-//        String triangle2 = reader.readLine();
-//
-//        String[] arrayStrings2 = triangle2.split(",");
-//
-//        double p2 = 1/2*(Integer.parseInt(arrayStrings2[1].trim()) + Integer.parseInt(arrayStrings2[2].trim()) + Integer.parseInt(arrayStrings2[3].trim()));
-//        double s2 = Math.sqrt(p * (p - Integer.parseInt(arrayStrings2[1].trim())) * (p - Integer.parseInt(arrayStrings2[2].trim())) * (p - Integer.parseInt(arrayStrings2[3].trim())));
-//
-//        //HashMap<Double, String> sTriagle = new HashMap<Double, String>();
-//        sTriagle.put(s, arrayStrings[0].trim());
-//        sTriagle.put(s2, arrayStrings2[0].trim());
-//
-//        Map<Double, String> sortedMap = new TreeMap<Double, String>();
-//        sortedMap.putAll(sTriagle);
-//
-//        for (Map.Entry<Double, String> temp : sTriagle.entrySet()){
-//            System.out.println(temp.getKey() + " " + temp.getValue());
-//        }
-
     }
 }
