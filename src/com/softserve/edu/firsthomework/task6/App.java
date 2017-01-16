@@ -1,4 +1,4 @@
-package com.softserve.edu.FirstHomeWork.Task6;
+package com.softserve.edu.firsthomework.task6;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -19,7 +19,7 @@ public class App {
 
         System.out.println("Please add address to file with method:");
         addressOfFile = readFile(reader.readLine());
-        //E:\Project\SoftServe\src\com\softserve\edu\FirstHomeWork\Task6\Moskow.txt
+        //E:\Project\SoftServe\src\com\softserve\edu\firsthomework\task6\Moskow.txt
 
         for (int i = 111111; i <= 999999; i++){
             if (addressOfFile.contains(moskow)){

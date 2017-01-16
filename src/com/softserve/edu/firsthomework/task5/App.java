@@ -1,4 +1,4 @@
-package com.softserve.edu.FirstHomeWork.Task5;
+package com.softserve.edu.firsthomework.task5;
 
 public class App {
     private static StringBuffer stringBuffer = new StringBuffer();

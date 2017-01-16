@@ -1,4 +1,4 @@
-package com.softserve.edu.FirstHomeWork.Task1;
+package com.softserve.edu.firsthomework.task1;
 
 public class App {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.softserve.edu.FirstHomeWork.Task8;
+package com.softserve.edu.firsthomework.task8;
 
 import java.io.IOException;
 

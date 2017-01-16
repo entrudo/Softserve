@@ -1,4 +1,4 @@
-package com.softserve.edu.FirstHomeWork.Task4;
+package com.softserve.edu.firsthomework.task4;
 
 import java.io.*;
 
@@ -10,7 +10,7 @@ public class App {
 
     public static void main(String[] args) throws IOException {
 
-        //E:\Project\SoftServe\src\com\softserve\edu\FirstHomeWork\Task4\Text.txt
+        //E:\Project\SoftServe\src\com\softserve\edu\firsthomework\task4\Text.txt
 
         if (args.length <= 1 || args.length > 3){
             System.out.println("If you want to count word you should use the next construction: <address of file> <word for find> \n" +

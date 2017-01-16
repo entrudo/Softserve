@@ -1,4 +1,4 @@
-package com.softserve.edu.FirstHomeWork.Task3;
+package com.softserve.edu.firsthomework.task3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
