@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class App {
-    static int i = 0;
+    private static int count = 0;
 
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -37,7 +37,7 @@ public class App {
             }
 
             //Calculate square of Triangle
-            double p = (double) 1/2 * (a + b + b);
+            double p = (double) 1/2 * (a + b + c);
             double s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
 
             // add Triangles to HashMap
@@ -57,8 +57,8 @@ public class App {
 
                 System.out.println("============= Triangles list: ===============");
                 for (Map.Entry<Double, String> temp : sortedMap.entrySet()){
-                    i = i + 1;
-                    System.out.println(i + "." + "[" + temp.getValue() + "]:" + " " + temp.getKey() + " cm");
+                    count = count + 1;
+                    System.out.println(count + "." + "[" + temp.getValue() + "]:" + " " + temp.getKey() + " cm");
                 }
 
                 return;
