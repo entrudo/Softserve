@@ -12,19 +12,19 @@ public class App {
         while (true) {
             // first envelope
             System.out.println("Please enter size of first envelope\nPlease enter side a:");
-            int a = Integer.parseInt(reader.readLine());
+            Double a = Double.parseDouble(reader.readLine());
             System.out.println("\nPlease enter side b:");
-            int b = Integer.parseInt(reader.readLine());
+            Double b = Double.parseDouble(reader.readLine());
 
             // second envelope
             System.out.println("\nPlease enter size of second envelope\nPlease enter side a:");
-            int c = Integer.parseInt(reader.readLine());
+            Double c = Double.parseDouble(reader.readLine());
             System.out.println("\nPlease enter side b:");
-            int d = Integer.parseInt(reader.readLine());
+            Double d = Double.parseDouble(reader.readLine());
 
             //Find space of envelopes
-            int sFirstEnvelope = a * b;
-            int sSecondEnvelope = c * d;
+            Double sFirstEnvelope = a * b;
+            Double sSecondEnvelope = c * d;
 
             //Write result about check envelopes
             if (sFirstEnvelope > sSecondEnvelope) {
