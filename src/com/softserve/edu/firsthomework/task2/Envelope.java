@@ -42,24 +42,15 @@ public class Envelope {
      * @param sideB
      */
     public Envelope(String sideA, String sideB) {
-        if (sideA.startsWith("0") || sideA.startsWith("-")){
-            System.out.println(App.help);
-            System.exit(0);
+        if (sideA.startsWith("0") || sideA.startsWith("-") || sideB.startsWith("0") || sideB
+                .startsWith("-") ){
+            throw new NumberFormatException(App.HELP_STRING);
         } else {
             try {
                 this.sideA = Double.parseDouble(sideA);
-            } catch (NumberFormatException e){
-                throw new NumberFormatException();
-            }
-        }
-
-        if (sideB.startsWith("0") || sideB.startsWith("-")){
-            throw new NumberFormatException(App.help);
-        } else {
-            try {
                 this.sideB = Double.parseDouble(sideB);
             } catch (NumberFormatException e){
-                throw new NumberFormatException(App.help);
+                throw new NumberFormatException(App.HELP_STRING);
             }
         }
     }

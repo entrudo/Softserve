@@ -7,64 +7,60 @@ import java.io.InputStreamReader;
 /**
  * The application that compares two envelopes and determines which can fit in another envelope
  *
- *  @author Alex
+ * @author Alex
  * @version 1.0
  */
 
 public class App {
-    public static String help = "In order for the program to work you need to enter the data one" +
-            " by one of two envelopes, each value must be greater than 0 in the following format:" +
-            " 99.99";
-    private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-    private static Envelope envelope;
-    private static Envelope secondEnvelope;
-
+    public static final String HELP_STRING = "In order for the program to work you need to enter " +
+            " the data one by one of two envelopes, each value must be greater than 0 in  the " +
+            "following format: 99.99";
+    private BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main(String[] args) throws IOException {
-
-        while (true) {
-
-            try {
-                envelope = createdNewEnvelope();
-            } catch (NumberFormatException e){
-                System.out.println(help);
-                System.exit(0);
-            }
-            envelope.calculateAreaOfEnvelope();
-
-            try {
-                secondEnvelope = createdNewEnvelope();
-            } catch (NumberFormatException e){
-                System.out.println(help);
-                System.exit(0);
-            }
-            secondEnvelope.calculateAreaOfEnvelope();
-
-            //Calculate and print result of compare envelopes
-            String result = envelope.compareEnvelope(secondEnvelope.getAreaOfEnvelope());
-            System.out.println(result);
-
-            if (!exit()){
-                return;
-            }
-        }
-
+        new App().run();
     }
 
     /**
-     *Method that allow exit from application
+     * Method for run application.
+     */
+    private void run() {
+        Envelope envelope;
+        Envelope secondEnvelope;
+
+        while (true) {
+            try {
+                envelope = createdNewEnvelope();
+                envelope.calculateAreaOfEnvelope();
+
+                secondEnvelope = createdNewEnvelope();
+                secondEnvelope.calculateAreaOfEnvelope();
+
+                //Calculate and print result of compare envelopes
+                String result = envelope.compareEnvelope(secondEnvelope.getAreaOfEnvelope());
+                System.out.println(result);
+
+                if (!exit()) {
+                    return;
+                }
+            } catch (NumberFormatException | IOException e) {
+                System.out.println(HELP_STRING);
+                System.exit(0);
+            }
+        }
+    }
+
+    /**
+     * Method that allow exit from application
      *
      * @return true if user wants to continue and false if user wants to exit from application
      * @throws IOException
      */
-    public static boolean exit() throws IOException{
+
+    private boolean exit() throws IOException {
         System.out.println("\nDo you want check envelop again? Y/ N");
         String exit = reader.readLine();
-        if (exit.equalsIgnoreCase("y") || exit.equalsIgnoreCase("yes")){
-            return true;
-        } else {
-            return false;
-        }
+        return exit.equalsIgnoreCase("y") || exit.equalsIgnoreCase("yes");
     }
 
     /**
@@ -73,7 +69,7 @@ public class App {
      * @return new Envelope
      * @throws IOException
      */
-    public static Envelope createdNewEnvelope() throws IOException{
+    private Envelope createdNewEnvelope() throws IOException {
 
         System.out.println("Please enter size of envelope\nPlease enter side a:");
         String sideAOfEnvelopeOne = reader.readLine();
