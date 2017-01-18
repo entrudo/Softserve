@@ -30,7 +30,7 @@ public class Envelope {
     /**
      * Method for calculate area of envelope
      */
-    public void areaOfEnvelope(){
+    public void calculateAreaOfEnvelope(){
         areaOfEnvelope = this.sideA * this.sideB;
 
     }
@@ -49,20 +49,17 @@ public class Envelope {
             try {
                 this.sideA = Double.parseDouble(sideA);
             } catch (NumberFormatException e){
-                System.out.println(App.help);
-                System.exit(0);
+                throw new NumberFormatException();
             }
         }
 
         if (sideB.startsWith("0") || sideB.startsWith("-")){
-            System.out.println(App.help);
-            System.exit(0);
+            throw new NumberFormatException(App.help);
         } else {
             try {
                 this.sideB = Double.parseDouble(sideB);
             } catch (NumberFormatException e){
-                System.out.println(App.help);
-                System.exit(0);
+                throw new NumberFormatException(App.help);
             }
         }
     }
@@ -70,22 +67,18 @@ public class Envelope {
     /**
      * Method that compare two envelopes
      *
-     * @param areaOfEnvelope
-
      * @param areaSecondOfEnvelope
      * @return String with answer about compare
      */
-    public static String compareEnvelope(double areaOfEnvelope, double areaSecondOfEnvelope){
-        if (areaOfEnvelope > areaSecondOfEnvelope){
+    public String compareEnvelope(double areaSecondOfEnvelope){
+        if (this.areaOfEnvelope > areaSecondOfEnvelope){
             return "First envelope bugger then second";
         } else {
-            if (areaOfEnvelope == areaSecondOfEnvelope){
+            if (this.areaOfEnvelope == areaSecondOfEnvelope){
                 return "First and second envelopes are equals";
             } else {
                 return "Second envelope bugger then first";
             }
         }
     }
-
-
 }
