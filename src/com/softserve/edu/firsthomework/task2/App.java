@@ -23,6 +23,7 @@ public class App {
 
     /**
      * Method for run application.
+     * This method is called all methods for the implementation of the program
      */
     private void run() {
         Envelope envelope;
@@ -69,7 +70,7 @@ public class App {
      * @return new Envelope
      * @throws IOException
      */
-    private Envelope createdNewEnvelope() throws IOException {
+    public Envelope createdNewEnvelope() throws IOException {
 
         System.out.println("Please enter size of envelope\nPlease enter side a:");
         String sideAOfEnvelopeOne = reader.readLine();

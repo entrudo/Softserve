@@ -44,13 +44,13 @@ public class Envelope {
     public Envelope(String sideA, String sideB) {
         if (sideA.startsWith("0") || sideA.startsWith("-") || sideB.startsWith("0") || sideB
                 .startsWith("-") ){
-            throw new NumberFormatException(App.HELP_STRING);
+            throw new NumberFormatException();
         } else {
             try {
                 this.sideA = Double.parseDouble(sideA);
                 this.sideB = Double.parseDouble(sideB);
             } catch (NumberFormatException e){
-                throw new NumberFormatException(App.HELP_STRING);
+                throw new NumberFormatException();
             }
         }
     }
