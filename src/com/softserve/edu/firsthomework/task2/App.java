@@ -39,9 +39,9 @@ public class App {
 				//Calculate and print result of compare envelopes
 				Boolean result = envelope.compareEnvelope(secondEnvelope.getAreaOfEnvelope());
 				if (result){
-					helper.printMessage("This envelope can fit in the main envelope");
+					System.out.println("This envelope can fit in the main envelope");
 				} else {
-					helper.printMessage("This envelope can't fit in the main envelope");
+					System.out.println("This envelope can't fit in the main envelope");
 				}
 				
 				if (! helper.exit(helper.readFromConsole("\nDo you want check envelop again? " +

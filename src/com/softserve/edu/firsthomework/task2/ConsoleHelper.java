@@ -48,12 +48,4 @@ public class ConsoleHelper {
         System.out.println(HELP_STRING);
         System.out.println(e.getStackTrace());
     }
-	
-	/**
-	 * Method that print user information
-	 * @param context This will be printed in console
-	 */
-	public void printMessage(String context){
-		System.out.println(context);
-	}
 }

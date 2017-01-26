@@ -1,4 +1,4 @@
-package com.softserve.edu.test;
+package com.softserve.edu.test.task2;
 
 import com.softserve.edu.firsthomework.task2.ConsoleHelper;
 import com.softserve.edu.firsthomework.task2.Envelope;
