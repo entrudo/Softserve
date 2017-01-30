@@ -14,7 +14,7 @@ public class BaseTestClase {
     
     @BeforeTest
     public void setUp() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get(addressOfSite);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

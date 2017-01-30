@@ -21,7 +21,7 @@ public class FindDublicateInTable {
         List<WebElement> table = driver.findElements(By.cssSelector("table > tbody > tr"));
         for (WebElement element : table){
             WebElement actual = element.findElement(By.className(className));
-            if (!actual.getText().equals(desiredValue)){
+            if (!actual.getText().contains(desiredValue)){
                 count++;
             }
         }
