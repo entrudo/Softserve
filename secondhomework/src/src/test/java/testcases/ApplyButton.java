@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 public class ApplyButton {
     private WebElement applyButton;
     private WebDriver driver;
-    
+
     public ApplyButton(WebDriver driver) {
         this.driver = driver;
         applyButton = driver.findElement(By.id("applybutton"));
